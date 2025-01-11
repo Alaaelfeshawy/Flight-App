@@ -13,7 +13,6 @@ import example.alaa.home.ui.model.PassengerUiModel
 import example.alaa.home.ui.model.SearchModel
 import example.alaa.home.ui.model.TripType
 import javax.inject.Inject
-
 @HiltViewModel
 class SingleTripViewModel @Inject constructor(): BaseViewModel<
         SingleTripIntent, TabState, TabEvent>() {
