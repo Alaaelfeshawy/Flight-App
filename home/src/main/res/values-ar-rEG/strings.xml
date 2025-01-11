@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="book_your_flight">Book your flight</string>
+    <string name="current_offer">Current Offer</string>
+    <string name="see_all">See All</string>
+    <string name="off">%1$s% OFF</string>
+    <string name="discount_with_mastercard">%1$s% discount with mastercard</string>
+    <string name="get_a_discount_when_you_use_this">Get a discount when you use this.</string>
+    <string name="to">To</string>
+    <string name="from">From</string>
+</resources>

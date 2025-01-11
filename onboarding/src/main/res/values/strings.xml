@@ -1,0 +1,10 @@
+<resources>
+    <string name="easy_to_use_easy_flight_search">Easy To Use. Easy Flight Search.</string>
+    <string name="user_friendly_interface_efficient_flight_search">“User-friendly interface. Efficient flight search.”\n</string>
+    <string name="quick_booking_real_time_flight_alerts">Quick Booking. Real-Time Flight Alerts.</string>
+    <string name="enjoy_a_hassle_free_booking_and_instant_flight_status_updates">“Enjoy a hassle-free booking and instant flight status updates.”</string>
+    <string name="fast_and_secure_payment_options">Fast and Secure Payment Options</string>
+    <string name="secure_trusted_payments_protecting_your_financial_information"><![CDATA[“Secure & Trusted Payments: Protecting Your Financial Information.”]]></string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+</resources>

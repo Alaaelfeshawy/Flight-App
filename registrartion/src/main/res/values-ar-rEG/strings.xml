@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_up">Sign up</string>
+    <string name="the_safest_way_to_travel_in_toddy_s_world">The safest way to travel in toddy\'s world.</string>
+    <string name="can_you_input_your_number">Can you input your number?</string>
+    <string name="verifiy_desc">"You will be sent a code on this number to verify if you are the owner of the number. "</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="verify">Verify</string>
+    <string name="otp_verification_desc">Enter the verification code we just sent to your number +233 *******53.</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="resend">Resend</string>
+    <string name="didn_t_receive_code">Didn’t receive code?</string>
+    <string name="welcome_to_fly_mac">Welcome to Fly Mac</string>
+    <string name="ready_to_fly">Ready to Fly!</string>
+    <string name="your_account_has_been_created_successfully">Your account has been created successfully.</string>
+    <string name="done">Done</string>
+    <string name="enter_password">Enter password</string>
+    <string name="enter_email_or_phone_number">Enter email or phone number</string>
+    <string name="by_continuing_you_accept_our">By continuing you accept our</string>
+    <string name="terms_of_service">" Terms of Service."</string>
+    <string name="also_learn_how_we_process_your_data_in_our">" Also learn how we process your data in our "</string>
+    <string name="privacy_policy">" Privacy Policy"</string>
+    <string name="and">" and"</string>
+    <string name="cookies_policy">" Cookies policy."</string>
+    <string name="password">Password</string>
+    <string name="hide_password">Hide password</string>
+    <string name="show_password">Show password</string>
+    <string name="send_code">Send Code</string>
+    <string name="invalid_phone_number">Invalid Phone number</string>
+    <string name="user_name_couldn_t_be_empty">user name couldn\'t be empty</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="choose_a_password">Choose a password</string>
+    <string name="please_enter_your_details_in_the_following_section">Please enter your details in the following section.</string>
+    <string name="almost_done">Almost Done!</string>
+    <string name="enter_username">Enter username</string>
+    <string name="password_validation_characters_count_label">Have a minimum of 8 characters and a maximum of 20 characters.</string>
+    <string name="password_validation_spaces_label">Not contain spaces</string>
+    <string name="password_rules_no_username">"Do not include your username"</string>
+    <string name="password_validation_sequence_label">Not contain sequence 1234 or abcd.</string>
+    <string name="password_rules_one_number">"Include at least one number"</string>
+    <string name="password_validation_special_characters_label">Have at least one of these special character from the set
+($, #, ^ , @, &amp;, %). </string>
+    <string name="password_at_least_one_capital_error_label">The password should contain at least one capital alphapet </string>
+    <string name="password_should_match_confirm_password">The password should match confirm password </string>
+    <string name="invalid_username">Invalid username</string>
+    <string name="enter_password_placeholder">Enter password</string>
+
+</resources>

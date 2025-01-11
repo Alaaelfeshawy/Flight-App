@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MyApp.Launch" parent="Theme.SplashScreen">
+        <!-- Background color or drawable for your splash screen -->
+        <item name="windowSplashScreenBackground">@color/orange</item>
+        <!-- Optional: Add your splash screen icon -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/applogo</item>
+        <!-- Optional: Duration -->
+        <item name="windowSplashScreenAnimationDuration">300</item>
+        <!-- Customize status bar -->
+        <item name="postSplashScreenTheme">@style/Theme.MyApp</item>
+    </style>
+
+    <style name="Theme.MyApp" parent="android:Theme.Material.Light.NoActionBar"/>
+
+
+</resources>
