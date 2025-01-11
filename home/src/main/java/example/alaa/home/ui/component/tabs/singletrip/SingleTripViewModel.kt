@@ -17,7 +17,6 @@ import javax.inject.Inject
 @HiltViewModel
 class SingleTripViewModel @Inject constructor(): BaseViewModel<
         SingleTripIntent, TabState, TabEvent>() {
-
     override val initialState: TabState
         get() = TabState(
             singleTripState = SingleTripState(
