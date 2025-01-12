@@ -14,7 +14,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import example.alaa.base.R
 
@@ -22,7 +21,7 @@ import example.alaa.base.R
 fun CustomField(
     modifier: Modifier = Modifier,
     inputTextModifier: Modifier = Modifier,
-    value : String,
+    value : String = "",
     onValueChange :(String)->Unit = {},
     isReadOnly : Boolean = false,
     colors : TextFieldColors = TextFieldDefaults.colors(

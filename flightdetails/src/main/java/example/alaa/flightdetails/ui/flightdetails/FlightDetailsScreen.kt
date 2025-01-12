@@ -1,9 +1,12 @@
-package example.alaa.flightdetails
+package example.alaa.flightdetails.ui.flightdetails
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -14,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -23,14 +27,31 @@ import androidx.navigation.NavHostController
 import example.alaa.base.component.DashedLine
 import example.alaa.base.component.FlightApp
 import example.alaa.base.component.PrimaryMainButton
+import example.alaa.base.component.TabBarBackground
 import example.alaa.base.component.TripTime
+import example.alaa.flightdetails.ui.route.NavigationItem
+import example.alaa.searchresult.R
 
 @Composable
 fun FlightDetailsScreen(modifier: Modifier = Modifier, navController: NavHostController?=null) {
 
     FlightApp(
-        modifier = modifier.verticalScroll(rememberScrollState())
+        modifier = modifier.verticalScroll(rememberScrollState()),
+        title = stringResource(R.string.flight_details),
+        color = colorResource(example.alaa.base.R.color.orange),
+        backArrowColor = Color.White,
+        navigationButtonClicked = {
+            navController?.popBackStack()
+        }
     ){
+        Box (
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(54.dp)
+                .background(colorResource(example.alaa.base.R.color.orange))
+        ){
+            TabBarBackground()
+        }
         Card(
             modifier = modifier
                 .padding(12.dp),
@@ -68,7 +89,8 @@ fun FlightDetailsScreen(modifier: Modifier = Modifier, navController: NavHostCon
                 )
 
                 Row(
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier
+                        .fillMaxWidth()
                         .padding(horizontal = 8.dp, vertical = 8.dp),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
@@ -89,14 +111,14 @@ fun FlightDetailsScreen(modifier: Modifier = Modifier, navController: NavHostCon
                 }
 
                 TripTime(
-                    departTimeLabel = "Date",
+                    departTimeLabel = stringResource(R.string.date),
                     departTimeValue = "Tue, May 06",
                     arrivalTimeLabel = "Time",
                     arrivalTimeValue = "07:00 AM",
                 )
 
                 TripTime(
-                    departTimeLabel = "Class",
+                    departTimeLabel = stringResource(R.string.class_label),
                     departTimeValue = "Economy",
                     arrivalTimeLabel = "Hand Baggage",
                     arrivalTimeValue = "23Kg",
@@ -105,7 +127,7 @@ fun FlightDetailsScreen(modifier: Modifier = Modifier, navController: NavHostCon
 
                 Text(
                     modifier = Modifier.padding(8.dp),
-                    text = "Fare Summary",
+                    text = stringResource(R.string.fare_summary),
                     color = Color.Black,
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 15.sp
@@ -120,9 +142,12 @@ fun FlightDetailsScreen(modifier: Modifier = Modifier, navController: NavHostCon
 
                 DashedLine()
                 Row(
-                    modifier = Modifier.fillMaxWidth()
-                        .padding(horizontal = 8.dp,
-                            vertical = 12.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(
+                            horizontal = 8.dp,
+                            vertical = 12.dp
+                        ),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(
@@ -144,16 +169,19 @@ fun FlightDetailsScreen(modifier: Modifier = Modifier, navController: NavHostCon
                         horizontal = 8.dp,
                         vertical = 12.dp
                     ),
-                    text = "*Refundable (Penalty Applies).",
+                    text = stringResource(R.string.refundable_penalty_applies),
                     color = Color.Black,
                     fontWeight = FontWeight.Medium,
                     fontSize = 15.sp
                 )
                 PrimaryMainButton(
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier
+                        .fillMaxWidth()
                         .padding(horizontal = 12.dp, vertical = 8.dp),
-                    buttonText = "Confirm",
-                    onButtonClick = {}
+                    buttonText = stringResource(R.string.confirm),
+                    onButtonClick = {
+                        navController?.navigate(NavigationItem.SeatSelection.route)
+                    }
                 )
 
             }

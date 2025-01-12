@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FlightApp">
         <activity
-            android:name=".PaymentActivity"
+            android:name=".ui.PaymentActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.FlightApp"/>
