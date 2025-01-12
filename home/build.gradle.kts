@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.dagger.hilt.android)
     kotlin("kapt")
     id("kotlin-android")
+    id ("kotlin-parcelize")
 }
 
 android {
@@ -39,6 +40,7 @@ android {
 dependencies {
 
     implementation(project(":base"))
+    implementation(project(":searchresult"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
