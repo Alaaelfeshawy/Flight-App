@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/orange</item>
+        <item name="background">@drawable/splash_screen_background</item>
+    </style>
+
+    <style name="Theme.MyApp.Splash" parent="Theme.SplashScreen">
+        <item name="android:windowSplashScreenBackground">@color/orange</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@null</item>
+        <item name="android:windowSplashScreenBrandingImage">@null</item>
+        <item name="android:windowSplashScreenAnimationDuration">0</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+</resources>
