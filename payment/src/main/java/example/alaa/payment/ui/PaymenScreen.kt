@@ -7,9 +7,12 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
@@ -24,6 +27,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import example.alaa.base.component.CustomField
 import example.alaa.base.component.DashedLine
 import example.alaa.base.component.FlightApp
@@ -34,12 +38,14 @@ import example.alaa.base.component.TripLine
 import example.alaa.base.component.TripTime
 import example.alaa.base.component.model.TripLocation
 import example.alaa.payment.R
+import example.alaa.payment.ui.route.NavigationItem
 
 @Composable
-fun PaymentScreen(modifier: Modifier = Modifier) {
+fun PaymentScreen(modifier: Modifier = Modifier , navController: NavController?=null) {
     FlightApp{
         Box(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier.fillMaxSize()
+                .verticalScroll(rememberScrollState()),
         ){
             Column {
                 Card(
@@ -184,9 +190,15 @@ fun PaymentScreen(modifier: Modifier = Modifier) {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 SecondButton(
+                    modifier = Modifier.height(56.dp),
                     buttonText = "Cancel"
                 )
-                PrimaryMainButton(buttonText = "Confirm")
+                PrimaryMainButton(
+                    buttonText = "Confirm" ,
+                    modifier = Modifier.height(56.dp),
+                    ){
+                    navController?.navigate(NavigationItem.BoardingPass.route)
+                }
             }
         }
     }

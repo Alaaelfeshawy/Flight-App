@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -64,9 +65,7 @@ fun FlightDetailsScreen(modifier: Modifier = Modifier, navController: NavHostCon
             )
         ) {
             Column(
-                modifier = Modifier.padding(
-                    bottom = 24.dp
-                )
+                modifier = Modifier.padding(12.dp)
             ){
                 Row(
                     modifier = Modifier.padding(18.dp)
@@ -79,6 +78,7 @@ fun FlightDetailsScreen(modifier: Modifier = Modifier, navController: NavHostCon
                         )
                 }
                 DashedLine()
+                Spacer(modifier = Modifier.height(8.dp))
                 TripTime(
                     departTimeLabel = "Temale",
                     departTimeValue = "TEL",
@@ -91,18 +91,20 @@ fun FlightDetailsScreen(modifier: Modifier = Modifier, navController: NavHostCon
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 8.dp, vertical = 8.dp),
+                        .padding(vertical = 8.dp),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(
-                        modifier = Modifier.weight(1f),
+                        modifier = Modifier.weight(1f)
+                            .padding(end = 6.dp),
                         text = "Temale International Airport",
                         color = Color.Black,
                         maxLines = 2,
                         textAlign = TextAlign.Start,
                     )
                     Text(
-                        modifier = Modifier.weight(1f),
+                        modifier = Modifier.weight(1f)
+                            .padding(end = 6.dp),
                         text = "Kumasi International Airport",
                         color = Color.Black,
                         maxLines = 2,
@@ -123,10 +125,12 @@ fun FlightDetailsScreen(modifier: Modifier = Modifier, navController: NavHostCon
                     arrivalTimeLabel = "Hand Baggage",
                     arrivalTimeValue = "23Kg",
                 )
-                DashedLine()
+                DashedLine(
+                    modifier = Modifier.padding(vertical = 8.dp)
+                )
 
                 Text(
-                    modifier = Modifier.padding(8.dp),
+                    modifier = Modifier.padding(vertical = 8.dp),
                     text = stringResource(R.string.fare_summary),
                     color = Color.Black,
                     fontWeight = FontWeight.SemiBold,
@@ -140,13 +144,13 @@ fun FlightDetailsScreen(modifier: Modifier = Modifier, navController: NavHostCon
                     arrivalTimeValue = "GHS 800",
                 )
 
-                DashedLine()
+                DashedLine( modifier = Modifier.padding(vertical = 8.dp))
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(
                             horizontal = 8.dp,
-                            vertical = 12.dp
+                            vertical = 8.dp
                         ),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
@@ -177,7 +181,8 @@ fun FlightDetailsScreen(modifier: Modifier = Modifier, navController: NavHostCon
                 PrimaryMainButton(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 12.dp, vertical = 8.dp),
+                        .height(56.dp)
+                        .padding(horizontal = 12.dp,vertical = 8.dp),
                     buttonText = stringResource(R.string.confirm),
                     onButtonClick = {
                         navController?.navigate(NavigationItem.SeatSelection.route)

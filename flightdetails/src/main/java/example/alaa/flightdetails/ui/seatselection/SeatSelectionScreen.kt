@@ -1,5 +1,7 @@
 package example.alaa.flightdetails.ui.seatselection
 
+import android.content.Context
+import android.content.Intent
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -29,6 +31,7 @@ import example.alaa.base.component.ScreenSubtitle
 import example.alaa.base.component.TabBarBackground
 import example.alaa.flightdetails.ui.seatselection.components.FlightSeatLayout
 import example.alaa.flightdetails.ui.seatselection.components.SeatsStatus
+import example.alaa.payment.ui.PaymentActivity
 import example.alaa.searchresult.R
 
 @Composable
@@ -44,7 +47,7 @@ fun SeatSelectionScreen(modifier: Modifier = Modifier,
         viewmodel.events.collect{
             when(it){
                 is SeatSelectionEvents.NavigateToPayment -> {
-
+                    navigateToPaymentScreen(context)
                 }
             }
         }
@@ -108,12 +111,17 @@ fun SeatSelectionScreen(modifier: Modifier = Modifier,
             buttonText = "Confirm Seats",
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(12.dp),
+                .padding(12.dp)
+                .height(56.dp),
             onButtonClick = {
                 viewmodel.processIntent(SeatSelectionIntent.ConfirmSeats)
             }
         )
     }
+}
+
+private fun navigateToPaymentScreen(context: Context,){
+    context.startActivity(Intent( context, PaymentActivity::class.java))
 }
 
 @Preview

@@ -88,7 +88,7 @@ fun RoundTripTab(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(12.dp)
-                .height(54.dp),
+                .height(56.dp),
             buttonText = "Search",
             onButtonClick = {
                 viewModel.processIntent(
