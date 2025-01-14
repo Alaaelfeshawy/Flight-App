@@ -10,7 +10,6 @@ import example.alaa.onboarding.route.AppNavHost
 class OnboardingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             AppNavHost(navController = rememberNavController())
         }

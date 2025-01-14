@@ -4,6 +4,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import example.alaa.base.component.DropDownComponent
+import example.alaa.home.R
 import example.alaa.home.ui.model.Action
 import example.alaa.home.ui.DropDownListActions
 import example.alaa.home.ui.PassengerDialogActions
@@ -35,7 +38,7 @@ fun PassengerClassesComponent(
                 invalidTotalPassengerCountErrorMessage = state.invalidTotalPassengerCountErrorMessage,
             )
 
-            ClassComponent(
+            DropDownComponent(
                 modifier = Modifier.weight(1f),
                 onDismissRequest = {
                     onAction(DropDownListActions.OnDismissRequest)
@@ -46,9 +49,10 @@ fun PassengerClassesComponent(
                 onItemSelected = {
                     onAction(DropDownListActions.OnItemSelected(item = it))
                 },
-                planeClasses = state.planeClasses ,
-                selectedClassPosition = state.selectedClassPosition,
-                isClassDropDownExpanded = state.isClassDropDownExpanded,
+                list = state.planeClasses ,
+                selectedItemPosition = state.selectedClassPosition,
+                isDropDownExpanded = state.isClassDropDownExpanded,
+                title = stringResource(R.string.class_label)
             )
         }
     }

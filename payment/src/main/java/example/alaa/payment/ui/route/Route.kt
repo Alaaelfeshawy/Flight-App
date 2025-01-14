@@ -5,7 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import example.alaa.payment.ui.BoardingPassScreen
-import example.alaa.payment.ui.PaymentScreen
+import example.alaa.payment.ui.payment.PaymentScreen
 
 @Composable
 fun AppNavHost(

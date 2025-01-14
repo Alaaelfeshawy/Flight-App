@@ -13,10 +13,8 @@ import example.alaa.payment.ui.route.AppNavHost
 class PaymentActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             AppNavHost(
-                modifier = Modifier,
                 navController = rememberNavController()
             )
         }

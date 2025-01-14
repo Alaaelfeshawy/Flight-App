@@ -1,4 +1,4 @@
-package example.alaa.home.ui.component
+package example.alaa.base.component
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -9,18 +9,17 @@ import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import example.alaa.base.component.CustomField
-import example.alaa.base.component.DropDownList
 
 @Composable
-fun ClassComponent(
+fun DropDownComponent(
     modifier: Modifier = Modifier,
     onDropDownClicked: () -> Unit,
     onDismissRequest: () -> Unit,
     onItemSelected: (Int) -> Unit,
-    planeClasses : List<String>,
-    selectedClassPosition : Int,
-    isClassDropDownExpanded : Boolean
+    list : List<String>,
+    selectedItemPosition : Int,
+    isDropDownExpanded : Boolean,
+    title : String
 ) {
     Column(
         modifier = modifier
@@ -30,8 +29,8 @@ fun ClassComponent(
     ) {
         CustomField(
             inputTextModifier = Modifier.clickable { onDropDownClicked.invoke() },
-            value = planeClasses[selectedClassPosition],
-            title = "Class",
+            value = list[selectedItemPosition],
+            title = title,
             isReadOnly = true,
             suffix = {
                 Icon(
@@ -42,8 +41,8 @@ fun ClassComponent(
             enabled = false
         )
         DropDownList(
-            isDropDownExpanded = isClassDropDownExpanded,
-            list = planeClasses,
+            isDropDownExpanded = isDropDownExpanded,
+            list = list,
             onDismissRequest = {
                 onDismissRequest.invoke()
             },

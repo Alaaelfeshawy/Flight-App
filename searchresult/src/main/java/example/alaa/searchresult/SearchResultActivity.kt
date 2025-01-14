@@ -13,7 +13,6 @@ import example.alaa.searchresult.route.AppNavHost
 class SearchResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             AppNavHost(
                 modifier = Modifier,

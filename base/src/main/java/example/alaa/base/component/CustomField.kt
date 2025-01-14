@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import example.alaa.base.R
 
@@ -43,6 +44,7 @@ fun CustomField(
     errorMessage : String?=null,
     title : String?=null,
     enabled : Boolean = true,
+    visualTransformation : VisualTransformation = VisualTransformation.None ,
     suffix : @Composable (() -> Unit)? = null,
     prefix : @Composable (() -> Unit)? = null,
     ) {
@@ -73,6 +75,7 @@ fun CustomField(
             placeholder = placeholder,
             keyboardOptions = keyboardOptions,
             keyboardActions = keyboardActions,
+            visualTransformation = visualTransformation ,
             isError = isError,
             suffix = suffix,
             enabled = enabled,

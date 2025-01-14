@@ -30,10 +30,7 @@ fun FlightApp(
 ) {
     Scaffold(
         containerColor = Color.White,
-        modifier = Modifier
-            .padding(
-                top = 12.dp
-            ),
+        modifier = Modifier,
         topBar = {
             Row(
                 modifier = Modifier.fillMaxWidth().background(color = color),
