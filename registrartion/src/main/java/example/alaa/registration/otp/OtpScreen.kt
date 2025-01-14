@@ -71,8 +71,8 @@ fun OtpScreen(modifier: Modifier = Modifier,
     }
 
     LaunchedEffect(state.code, keyboardManager) {
-        val allNumbersEntered = state.code?.none { it == null }
-        if(allNumbersEntered == true) {
+        val allNumbersEntered = state.code.none { it == null }
+        if(allNumbersEntered) {
             focusRequesters.forEach {
                 it.freeFocus()
             }
@@ -163,7 +163,7 @@ fun OtpScreen(modifier: Modifier = Modifier,
                     modifier = modifier
                         .fillMaxWidth()
                         .padding(12.dp)
-                        .height(54.dp)
+                        .height(56.dp)
                         .align(Alignment.CenterHorizontally),
                     buttonText = stringResource(R.string.verify),
                     enabled = state.isValid == true,

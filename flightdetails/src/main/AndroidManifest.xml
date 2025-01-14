@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name="example.alaa.flightdetails.FlightDetailsActivity"
+            android:name="example.alaa.flightdetails.ui.FlightDetailsActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize"
             android:screenOrientation="portrait"

@@ -118,7 +118,7 @@ fun LoginScreen(modifier: Modifier = Modifier, navController: NavController?=nul
                     modifier = modifier
                         .fillMaxWidth()
                         .padding(12.dp)
-                        .height(54.dp)
+                        .height(56.dp)
                         .align(Alignment.CenterHorizontally),
                     buttonText = stringResource(R.string.login),
                     enabled = state.isButtonEnabled,

@@ -39,8 +39,7 @@ fun TripTime(
     ) {
         TripDetails(
             modifier = Modifier
-                .weight(1f)
-                .padding(8.dp),
+                .weight(1f),
             title = departTimeLabel,
             subTitle = departTimeValue,
             titleStyle = Styles.TripTimeStyles.departTimeLabelStyle,
@@ -92,7 +91,6 @@ fun TripTime(
 
         TripDetails(
             modifier = Modifier
-                .padding(8.dp)
                 .weight(1f),
             title = arrivalTimeLabel,
             subTitle = arrivalTimeValue,

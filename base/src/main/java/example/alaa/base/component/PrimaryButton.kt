@@ -1,5 +1,6 @@
 package example.alaa.base.component
 
+import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
@@ -11,11 +12,13 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import example.alaa.base.R
 
 @Composable
-fun PrimaryMainButton(modifier: Modifier = Modifier,
+fun PrimaryMainButton(
+              modifier: Modifier = Modifier,
                buttonText : String,
                enabled : Boolean = true,
                buttonColors : ButtonColors = ButtonDefaults.buttonColors(
@@ -26,9 +29,9 @@ fun PrimaryMainButton(modifier: Modifier = Modifier,
                ),
                color: Color = Color.White,
                onButtonClick: () -> Unit ={},
-               ) {
+) {
     Button(
-        modifier = modifier,
+        modifier = modifier.height(56.dp),
         onClick = onButtonClick,
         colors = buttonColors,
         enabled = enabled

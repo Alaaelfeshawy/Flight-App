@@ -19,8 +19,7 @@ import example.alaa.base.component.Styles
 import example.alaa.base.component.TripLine
 import example.alaa.base.component.TripTime
 import example.alaa.base.component.model.TripLocation
-import example.alaa.flightdetails.FlightDetailsActivity
-import example.alaa.searchresult.R
+import example.alaa.flightdetails.ui.FlightDetailsActivity
 import example.alaa.searchresult.route.BookingSection
 
 
@@ -69,7 +68,7 @@ fun FlightItem(modifier: Modifier = Modifier, context : Context) {
                         textAlign = TextAlign.End
                     ),
                 ),
-                image = R.drawable.airplane_1,
+                image = example.alaa.searchresult.R.drawable.airplane_1,
                 imageInfo = "Asky Airlines",
                 imageInfoColor = Color.Gray
             )

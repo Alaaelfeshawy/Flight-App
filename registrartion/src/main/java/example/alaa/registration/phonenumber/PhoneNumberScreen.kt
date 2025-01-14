@@ -74,7 +74,7 @@ fun PhoneNumberScreen(
                         modifier = modifier
                             .fillMaxWidth()
                             .padding(12.dp)
-                            .height(54.dp)
+                            .height(56.dp)
                             .align(Alignment.CenterHorizontally),
                         buttonText = stringResource(R.string.send_code),
                         enabled = buttonEnabled,
