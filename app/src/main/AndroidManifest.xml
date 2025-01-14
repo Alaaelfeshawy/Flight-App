@@ -7,13 +7,14 @@
         android:name="example.alaa.flightapp.ui.FlightApp"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/flight"
         android:label="@string/app_name"
         android:supportsRtl="true"
         tools:targetApi="31">
         <activity
             android:name="example.alaa.onboarding.OnboardingActivity"
             android:exported="true"
+            android:theme="@style/Theme.MyApp.Splash"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -21,6 +22,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 
