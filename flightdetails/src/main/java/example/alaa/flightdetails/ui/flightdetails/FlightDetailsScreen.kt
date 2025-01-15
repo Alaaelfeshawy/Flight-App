@@ -2,10 +2,10 @@ package example.alaa.flightdetails.ui.flightdetails
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -26,9 +26,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import example.alaa.base.component.DashedLine
-import example.alaa.base.component.FlightApp
+import example.alaa.base.component.Header
 import example.alaa.base.component.PrimaryMainButton
-import example.alaa.base.component.TabBarBackground
 import example.alaa.base.component.TripTime
 import example.alaa.flightdetails.ui.route.NavigationItem
 import example.alaa.searchresult.R
@@ -36,22 +35,13 @@ import example.alaa.searchresult.R
 @Composable
 fun FlightDetailsScreen(modifier: Modifier = Modifier, navController: NavHostController?=null) {
 
-    FlightApp(
-        modifier = modifier.verticalScroll(rememberScrollState()),
-        title = stringResource(R.string.flight_details),
-        color = colorResource(example.alaa.base.R.color.orange),
-        backArrowColor = Color.White,
-        navigationButtonClicked = {
-            navController?.popBackStack()
-        }
+    Column (
+        modifier = modifier.fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .background(Color.White),
     ){
-        Box (
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(54.dp)
-                .background(colorResource(example.alaa.base.R.color.orange))
-        ){
-            TabBarBackground()
+        Header(title =stringResource(R.string.flight_details)) {
+            navController?.popBackStack()
         }
         Card(
             modifier = modifier

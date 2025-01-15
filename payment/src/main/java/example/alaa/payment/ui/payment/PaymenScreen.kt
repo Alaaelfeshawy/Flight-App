@@ -1,5 +1,6 @@
 package example.alaa.payment.ui.payment
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -21,7 +22,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
@@ -39,7 +39,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import example.alaa.base.component.CustomField
 import example.alaa.base.component.DashedLine
-import example.alaa.base.component.FlightApp
+import example.alaa.base.component.Header
 import example.alaa.base.component.PrimaryMainButton
 import example.alaa.base.component.SecondButton
 import example.alaa.base.component.Styles
@@ -63,14 +63,12 @@ fun PaymentScreen(modifier: Modifier = Modifier , navController: NavController?=
             }
         }
     }
-    FlightApp {
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(54.dp)
-                .drawBehind {
-                },
-        )
+    Column(
+        modifier = Modifier.background(color = Color.White)
+    ){
+        Header(title = stringResource(R.string.payment)){
+
+        }
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -309,7 +307,6 @@ fun PaymentScreen(modifier: Modifier = Modifier , navController: NavController?=
         }
     }
 }
-
 
 @Preview
 @Composable

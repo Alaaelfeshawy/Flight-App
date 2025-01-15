@@ -7,4 +7,9 @@
     <string name="card_holder">Card Holder</string>
     <string name="cvv">CVV</string>
     <string name="cvv_placeholder">xxx</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="confirmed_label">Confirmed</string>
+    <string name="booking_done_successfully">Booking done successfully!</string>
+    <string name="boarding_pass">Boarding Pass</string>
+    <string name="payment">Payment</string>
 </resources>
