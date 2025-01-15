@@ -13,7 +13,6 @@ import example.alaa.flightdetails.ui.route.AppNavHost
 class FlightDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent{
             AppNavHost(
                 modifier = Modifier,

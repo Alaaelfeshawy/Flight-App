@@ -12,7 +12,6 @@ import example.alaa.registration.route.AppNavHost
 class RegistrationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             AppNavHost(navController = rememberNavController())
         }

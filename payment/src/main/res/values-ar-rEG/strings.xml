@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="payment_method">Payment Method</string>
+    <string name="card_number">Card number</string>
+    <string name="card_number_placeholder">xxxx xxxx xxxx xxxx</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="card_holder">Card Holder</string>
+    <string name="cvv">CVV</string>
+    <string name="cvv_placeholder">xxx</string>
 </resources>
